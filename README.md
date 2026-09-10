@@ -81,19 +81,19 @@ The visual analysis follows a storytelling sequence:
 
 1. Global sales evolution over time;
 
-1. Sales comparison by store type;
+2. Sales comparison by store type;
 
-1. Sales distributions and boxplots;
+3. Sales distributions and boxplots;
 
-1. Holiday versus non-holiday sales;
+4. Holiday versus non-holiday sales;
 
-1. Weekly and monthly seasonality;
+5. Weekly and monthly seasonality;
 
-1. Promotional Markdown analysis;
+6. Promotional Markdown analysis;
 
-1. Correlation analysis;
+7. Correlation analysis;
 
-1. Detection and interpretation of unusual observations.
+8. Detection and interpretation of unusual observations.
 
 The notebook reports an upward sales trend of approximately **6%** over the three-year period. It also identifies strong seasonal peaks near the end of the year, especially around Thanksgiving and Christmas.
 
@@ -187,23 +187,13 @@ The project also produces a Kaggle-style submission file and visual diagnostics,
 ## Project Structure
 
 ```
-walmart-data-validation/
-├── data/
-│   ├── train.csv
-│   ├── features.csv
-│   ├── stores.csv
-│   └── test.csv
-├── notebooks/
-│   └── Data_Validation_complete.ipynb
-├── images/
-│   ├── walmart-data-validation.jpg
-│   ├── plot_ventes_globales.png
-│   ├── plot_distribution.png
-│   ├── plot_saisonnalite.png
-│   ├── plot_markdowns.png
-│   └── plot_modele.png
-├── outputs/
-│   └── walmart_submission.csv
+Data-validation/
+├── Data_Validation_complete.ipynb
+├── train.csv
+├── features.csv
+├── stores.csv
+├── test.csv
+├── walmart-data-validation.jpg
 └── README.md
 ```
 
@@ -213,15 +203,13 @@ The exact output filenames depend on the execution environment and the cells sel
 
 1. Download the Walmart Sales Forecast dataset from Kaggle.
 
-1. Place `train.csv`, `features.csv`, `stores.csv` and `test.csv` in the project data directory, or update the paths in the notebook.
+2. Install the Python dependencies.
 
-1. Install the Python dependencies.
+3. Open `Data_Validation_complete.ipynb` with Jupyter Notebook or JupyterLab.
 
-1. Open `Data_Validation_complete.ipynb` with Jupyter Notebook or JupyterLab.
+4. Run the cells from top to bottom.
 
-1. Run the cells from top to bottom.
-
-1. Inspect the validation reports, visualizations, metrics and generated forecast file.
+5. Inspect the validation reports, visualizations, metrics and generated forecast file.
 
 Install the main dependencies with:
 
@@ -242,13 +230,6 @@ Negative weekly sales may represent returns, corrections or other accounting eff
 
 The reported MAPE is very high because percentage metrics are unstable for small or negative sales. Future versions should report additional robust metrics, consider a log-scale target transformation and evaluate performance separately for high-volume and low-volume departments.
 
-## Accessibility Description
-
-Use the following alternative text for the portfolio image:
-
-```html
-alt="Walmart weekly sales forecasting project showing data validation, seasonal sales trends, store comparisons and Random Forest model evaluation"
-```
 
 
 ## Author
